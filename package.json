@@ -2,11 +2,11 @@
   "name": "movies-explorer-api",
   "version": "1.0.0",
   "description": "movies explorer backend",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "lint": "npx eslint . --fix",
-    "start": "node index.js",
-    "dev": "nodemon --inspect -- index.js"
+    "start": "node app.js",
+    "dev": "nodemon --inspect -- app.js"
   },
   "keywords": [],
   "author": "sasha kostiukova",
@@ -25,7 +25,7 @@
     "express-winston": "^4.2.0",
     "helmet": "^7.1.0",
     "jsonwebtoken": "^9.0.2",
-    "mongoose": "^8.0.0",
+    "mongoose": "^8.0.3",
     "validator": "^13.11.0",
     "winston": "^3.11.0"
   }
