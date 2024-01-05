@@ -52,7 +52,7 @@ module.exports.createUser = async (req, res, next) => {
     if (error instanceof mongoose.Error.ValidationError) {
       next(new BadRequestError('Ошибка валидации полей'));
     } else if (error.code === MONGO_DUPLACATE_ERROR_CODE) {
-      next(new ConflictError('Такой пользователь уже существует'));
+      next(new ConflictError('Пользователь с таким email уже существует'));
     } else {
       next(error);
     }
@@ -74,6 +74,8 @@ module.exports.updateUser = async (req, res, next) => {
   } catch (error) {
     if (error instanceof mongoose.Error.ValidationError) {
       next(new BadRequestError('Ошибка валидации полей'));
+    } else if (error.code === MONGO_DUPLACATE_ERROR_CODE) {
+      next(new ConflictError('Пользователь с таким email уже существует'));
     } else {
       next(error);
     }
