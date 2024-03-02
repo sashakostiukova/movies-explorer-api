@@ -12,7 +12,7 @@ const userSignUpSchema = Joi.object().keys({
 });
 
 const movieIdSchema = Joi.object().keys({
-  _id: Joi.string().required().hex().length(24),
+  _id: Joi.string().required().hex(),
 });
 
 const userUpdateSchema = Joi.object().keys({
