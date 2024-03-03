@@ -4,6 +4,6 @@
 
 ## Ссылки на проект
 
-IP 158.160.23.78
+IP 158.160.72.214
 
 https://api.kostiukova.nomoredomainsmonster.ru
