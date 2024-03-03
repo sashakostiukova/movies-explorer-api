@@ -59,6 +59,7 @@ module.exports.createMovie = async (req, res, next) => {
 
 module.exports.deleteMovie = async (req, res, next) => {
   try {
+    console.log(req.params._id);
     const movie = await Movie.find({ movieId: req.params._id });
     console.log(movie); //////////////
 
