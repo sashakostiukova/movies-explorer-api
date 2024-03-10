@@ -62,7 +62,7 @@ module.exports.deleteMovie = async (req, res, next) => {
     console.log(req.params._id);
     // const movie = await Movie.find({ movieId: req.params._id });
     const movie = await Movie.findById(req.params._id);
-    console.log(movie); //////////////
+    console.log(movie); /// ///////////
 
     if (!movie) {
       throw new NotFoundError('Карточка по id не найдена');
